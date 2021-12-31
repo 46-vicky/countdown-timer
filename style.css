@@ -18,6 +18,11 @@ body {
     color: #fff;
 }
 
+.inputcontainer {
+    margin-bottom: 100px;
+    height: 50px;
+}
+
 h1 {
     font-size: 4rem;
     margin-top: -5rem;

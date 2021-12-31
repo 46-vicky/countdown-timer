@@ -2,11 +2,27 @@ const daysEl = document.getElementById('days');
 const hoursEl = document.getElementById('hours');
 const minsEl = document.getElementById('mins');
 const secsEl = document.getElementById('secs');
+const dateEl = document.getElementById('inputbox')
+const buttonEl = document.getElementById('btn')
+    // window.userInput = '';
 
-const birthday = "17 sep 2022";
+
+
+buttonEl.addEventListener("click", addtask);
+
+function addtask() {
+    // window.userInput = dateEl.value;
+    countdown();
+    setInterval(countdown, 1000);
+}
+
+
+//const birthday = "17 sep 2022";
+
 
 function countdown() {
-    const birthdayDate = new Date(birthday);
+    const birthdayDate = new Date(dateEl.value);
+    console.log(birthdayDate);
     const currentDate = new Date();
 
 
@@ -30,5 +46,5 @@ function countdown() {
 function formatTime(time) {
     return time < 10 ? (`0${ time }`) : time;
 }
-countdown();
-setInterval(countdown, 1000);
+// countdown();
+// setInterval(countdown, 1000);
